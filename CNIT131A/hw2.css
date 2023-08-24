@@ -1,0 +1,26 @@
+Listofbooks
+{
+    background-color: lightgray;
+    width: 100%;
+}
+Book
+{
+    display: block;
+}
+Book:nth-child(odd)
+{
+    background-color:#FCD581;      
+}
+Title
+{
+    display: block;
+    color: red;
+    font-weight: bold;
+}
+Author,Publisher,Pages
+{
+    display: block;
+    margin-left: 20pt;
+}
+
+
