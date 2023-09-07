@@ -2,11 +2,32 @@
 <!-- HW3 - XSLT. It was created by Chu-Cheng Li on 09/02/2023 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">   
    <xsl:template match = "/"> 
-      <html> 
+      <html lang="en"> 
+         <head>
+            <title>List of Clients</title>
+            <style>
+               table,th,td
+               {
+                  border:1px; border-style: dotted; color:black;  
+               }
+               th
+               {
+                  background-color: lightblue;
+               }
+               p
+               {
+                  color: red;
+               }
+               .righttd
+               {
+                  text-align: right;
+               }
+            </style>
+         </head>
          <body> 
             <h1>List of Clients</h1> 
-            <table border = "1"> 
-               <tr bgcolor = "lightblue"> 
+            <table> 
+               <tr> 
                   <th>Name</th> 
                   <th>Phone</th> 
                   <th>Email</th> 
@@ -17,10 +38,10 @@
                      <td><xsl:value-of select = "Name"/></td>
                      <td><xsl:value-of select = "Phone"/></td>
                      <td><xsl:value-of select = "E-mail"/></td>
-                     <td align="right">
+                     <td class="righttd">
                         <xsl:choose>
                            <xsl:when test="Account_Total &lt;= 80000">
-                              <font color="red"><b>&#36;<xsl:value-of select = "Account_Total"/></b></font>
+                              <p><b>&#36;<xsl:value-of select = "Account_Total"/></b></p>
                            </xsl:when>
                            <xsl:otherwise>
                               &#36;<xsl:value-of select = "Account_Total"/>
