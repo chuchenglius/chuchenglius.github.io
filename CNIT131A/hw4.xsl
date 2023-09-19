@@ -4,6 +4,7 @@
    <xsl:template match = "/">
       <html lang="en"> 
          <head>
+            <meta name="description" content=" XML, JSON, XSLT, HTML5."></meta>
             <title>ABC Financial Startup company</title>
             <style>
             .financialup {
