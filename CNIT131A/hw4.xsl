@@ -26,10 +26,10 @@
             <xsl:for-each select="Accounts/Client">             
                <xsl:choose>
                   <xsl:when test="position()=last()">
-                     and <xsl:value-of select = "Name"/>.
+                     and <xsl:value-of select = "Name/First"/>&#160;<xsl:value-of select = "Name/Last"/>.
                   </xsl:when>
                   <xsl:otherwise>
-                     <xsl:value-of select = "Name"/>,
+                     <xsl:value-of select = "Name/First"/>&#160;<xsl:value-of select = "Name/Last"/>,
                   </xsl:otherwise>
                </xsl:choose>   
              </xsl:for-each> 
