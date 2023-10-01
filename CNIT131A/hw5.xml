@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- HW5 - DTD by Chu-Cheng Li on 09/30/2023 -->
-<!-- KL -->
 <!DOCTYPE Products [
   <!ELEMENT Products (Prod+)>
   <!ATTLIST Prod ProdID ID #REQUIRED>
@@ -14,7 +13,6 @@
   <!ELEMENT Loc (#PCDATA)>
   <!ENTITY usalocal "Made in USA">
 ]>
-<!-- KL -->
 
 <Products>
 
@@ -25,7 +23,6 @@
 </Details>
 <Quantity>20</Quantity>
 <Unit_Price>3.50</Unit_Price>
-<!-- KL -->
 <Loc>&usalocal;</Loc>
 </Prod>
 
@@ -37,7 +34,6 @@
 <Quantity>30</Quantity>
 <Unit_Price>5.50</Unit_Price>
 <Color>White</Color>
-<!-- KL -->
 <Loc>&usalocal;</Loc>
 </Prod>
 
@@ -49,7 +45,6 @@
 <Quantity>28</Quantity>
 <Unit_Price>6.50</Unit_Price>
 <Color>Red</Color>
-<!-- KL -->
 <Loc>&usalocal;</Loc>
 </Prod>
 
@@ -60,7 +55,6 @@
 </Details>
 <Quantity>15</Quantity>
 <Unit_Price>2.65</Unit_Price>
-<!-- KL -->
 <Loc>&usalocal;</Loc>
 </Prod>
 
