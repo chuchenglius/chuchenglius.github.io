@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- HW5 - DTD by Chu-Cheng Li on 09/30/2023 -->
+<!-- KL -->
+<!DOCTYPE Products [
+  <!ELEMENT Products (Prod+)>
+  <!ATTLIST Prod ProdID ID #REQUIRED>
+  <!ELEMENT Prod (Details,Quantity,Unit_Price,Color?,Loc)>
+  <!ELEMENT Details (Short_Desc,Long_Desc)>
+  <!ELEMENT Short_Desc (#PCDATA)>
+  <!ELEMENT Long_Desc (#PCDATA)>
+  <!ELEMENT Quantity (#PCDATA)>
+  <!ELEMENT Unit_Price (#PCDATA)>
+  <!ELEMENT Color (#PCDATA)>
+  <!ELEMENT Loc (#PCDATA)>
+  <!ENTITY usalocal "Made in USA">
+]>
+<!-- KL -->
 
 <Products>
 
@@ -9,7 +25,8 @@
 </Details>
 <Quantity>20</Quantity>
 <Unit_Price>3.50</Unit_Price>
-<Loc>Made in USA</Loc>
+<!-- KL -->
+<Loc>&usalocal;</Loc>
 </Prod>
 
 <Prod ProdID="P1234567">
@@ -20,7 +37,8 @@
 <Quantity>30</Quantity>
 <Unit_Price>5.50</Unit_Price>
 <Color>White</Color>
-<Loc>Made in USA</Loc>
+<!-- KL -->
+<Loc>&usalocal;</Loc>
 </Prod>
 
 <Prod ProdID="P3256788">
@@ -31,7 +49,8 @@
 <Quantity>28</Quantity>
 <Unit_Price>6.50</Unit_Price>
 <Color>Red</Color>
-<Loc>Made in USA</Loc>
+<!-- KL -->
+<Loc>&usalocal;</Loc>
 </Prod>
 
 <Prod ProdID="P0025443">
@@ -41,7 +60,8 @@
 </Details>
 <Quantity>15</Quantity>
 <Unit_Price>2.65</Unit_Price>
-<Loc>Made in USA</Loc>
+<!-- KL -->
+<Loc>&usalocal;</Loc>
 </Prod>
 
 </Products>
