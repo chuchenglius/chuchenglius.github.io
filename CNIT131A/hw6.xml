@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- HW6 - XML Schema by Chu-Cheng Li on 10/14/2023 -->
+<Member xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="hw6.xsd">
 
-<Member>
 <Name>Jonathan Mark</Name>
 <Age>22</Age>
 <Job>Consultant</Job>
