@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- HW6 - XML Schema by Chu-Cheng Li on 10/14/2023 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
