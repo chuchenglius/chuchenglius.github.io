@@ -1,0 +1,17 @@
+/* HW7 - Namespace. It creates by Chu-Cheng Li 10/28/2023 */
+@namespace url(http://www.gov.org/west);
+@namespace east url(http://www.gov.org/east);
+states
+{
+    background-color: lightgray;
+    width: 100%;
+}
+state{
+    display: block;
+}
+east|state{
+    display: block;
+    background-color:#FCD581;      
+}
+
+
