@@ -6,17 +6,76 @@
 <!--HW8 - Extra XML. It creates by Chu-Cheng Li 11/06/2023 -->
 <meta name="description" content="XML, JSON, XSLT, HTML5.">
 <style>
-    h1 {text-align: center; font-style: italic; color:#990D35;}
+
 </style>
+
+<!--Reference reveal.js function https://revealjs.com/installation/-->
+<link rel="stylesheet" href="../dist/reveal.css">
+<!--Change ../dist/theme/white.css to hw8.css-->
+<link rel="stylesheet" href="hw8.css">
+
 </head>
 <body>
-<h1>XQIB and XQuery Study Research</h1>
-<hr>
+<div class="reveal">
+    <div class="slides">
+        <section><h1 class="redfont">XQuery and XQIB<br>function<br>study research</h1><br><br><br>Copyright &copy; Chu-Cheng Li</section>
+        <section>
+            <h2 class="bluefont">Agenda</h2><br>
+            <h3 class="leftfont">1. What is the main characteristic of XQuery?</h3>
+            <h3 class="leftfont">2. What is the XQuery of hw8.xq doing if applied on the XML of hw8.xml?</h3>
+            <h3 class="leftfont">3. Do a brief research and explain what is XQIB and how it can be used with XQuery?</h3>
+            <h3 class="leftfont">4. Reference information.</h3>
+        </section>
+        <section>
+        <h2 class="bluefont leftfont">What is the main characteristic of XQuery?</h2><br>
+        <p class="leftfont">XQuery is a language for querying and transforming XML data. It is similar to SQL, which is a language for querying relational databases.</p>
+        
+        <p class="leftfont">XQuery can be used to:</p>
+        <p class="leftfont">
+        &emsp;&#10148; Find specific elements or attributes in an XML document.<br>
+        &emsp;&#10148; Extract data from an XML document and transform it into another<br>&emsp;&emsp; format, such as HTML, JSON, or CSV.<br>
+        &emsp;&#10148; Generate dynamic XML content.<br>
+        &emsp;&#10148; Perform complex queries on XML data, such as joining multiple XML<br>&emsp;&emsp; documents or filtering data based on complex criteria.<br>
+        </p>
+        <p class="leftfont">
+        XQuery is a powerful language that can be used for a variety of tasks related to XML data processing. It is especially useful for developing web applications that need to interact with XML data.
+        </p>
+        </section>
+        <section>
+            <h2 class="bluefont leftfont">What is the XQuery of hw8.xq doing if applied on the XML of hw8.xml?</h2><br>
+            <p class="leftfont">
+            The <a href="hw8.xml" target="_blank">hw8.xml</a> file is a comprehensive index of books. It includes book titles, authors, prices, and classification. The <a href="hw8.xq" target="_blank">hw8.xq</a> file contains an XQuery script. The data source is from <a href="hw8.xml" target="_blank">hw8.xml</a>. When two files work together, the script lists the book's title price as less than $30.
+            </p>
+        </section>
 
-<ul>
-    <li><a href="index.html"> Go back to Main Page</a></li>
-</ul>
+        <section>
+        <h2 class="bluefont leftfont">Do a brief research and explain what is XQIB and how it can be used with XQuery?</h2><br>
+        <p class="leftfont">
+        &#10148; XQIB(XQuery In the Browser) is a way to use the XQuery language to<br>&emsp; query and transform XML data in a web browser. It is a standard that is<br>&emsp; supported by most modern browsers, and it does not require any plugins<br>&emsp; to be installed.
+        </p>
+        <p class="leftfont">
+        &#10148; To use XQIB, you simply need to write your XQuery code in a script tag<br>&emsp; with the type <strong>application/xquery</strong>. The XQIB engine will then execute the<br>&emsp; code and output the results to the web page.
+        </p>
+        </section>
+        <section>
+            <h2 class="bluefont">Reference information</h2><br>
+            <h3 class="leftfont"><a href="https://www.tutorialspoint.com/xquery/xquery_quick_guide.htm" target="_blank">&#10148; XQuery - Quick Guide</a></h3>
+            <h3 class="leftfont"><a href="https://www.w3schools.com/xml/xquery_intro.asp" target="_blank">&#10148; XQuery Tutorial</a></h3>
+            <h3 class="leftfont"><a href="https://xqib.org/" target="_blank">&#10148; XQuery in the Browser</a></h3>
+            <h3 class="leftfont"><a href="https://www.w3.org/TR/xquery-31/" target="_blank">&#10148; XQuery 3.1: An XML Query Language</a></h3>
+            <h3 class="leftfont"><a href="https://revealjs.com/" target="_blank">&#10148; The HTML presentation framework | reveal.js</a></h3>
+        </section>
+        <section>
+            <h1>End</h1>
+        </section>
+    </div>
+</div>
 
-<p>Copyright &copy; Chu-Cheng Li</p>
+<script src="../dist/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        transition: 'linear'
+    });
+</script>
 </body>
 </html>
