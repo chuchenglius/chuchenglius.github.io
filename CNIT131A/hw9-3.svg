@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--HW9 - SVG. It creates by Chu-Cheng Li 11/21/2023 -->
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" height="150" width="150">
+   <defs>
+      <radialGradient id="polygoncolor" cx="50%" cy="50%" r="50%">
+         <stop offset="0%" stop-color="#990D35" stop-opacity="0.5" />
+         <stop offset="100%" stop-color="#FCD581" stop-opacity="1" />
+      </radialGradient>
+   </defs>
+   <polygon
+      points="75,5 145,145 5,145" stroke="#990D35" stroke-width="3" fill="url(#polygoncolor)" />
+   Sorry, your browser does not support inline SVG. 
+</svg>

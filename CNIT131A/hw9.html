@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SVG Files in CNIT 131A</title>
+    <!--HW9 - SVG. It creates by Chu-Cheng Li 11/21/2023 -->
+    <meta name="description" content="XML, JSON, XSLT, HTML5.">
+    <style>
+        h1 {
+            text-align: center;
+            font-style: italic;
+            color: #990D35;
+        }
+
+        body {
+            background-image: url("cool-background.png");
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+            border-color: white;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #990D35;
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #FCD581;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dd6f7e;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #990D35;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Files in CNIT 131A</h1>
+    <hr>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <object width="150" height="150" type="image/svg+xml" data="hw9-1.svg"></object>
+                </td>
+                <td>
+                    The first SVG shows a yellow rectangle with a blue border.<br>
+                    This SVG uses &#60;rect&#62;. The start point (the upper right) is at (5px,33px).<br>
+                    The width is 140px, and the height is 75px.<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <object width="150" height="150" type="image/svg+xml" data="hw9-2.svg"></object>
+                </td>
+                <td>
+                    The second SVG shows a blue circle with a red border.<br>
+                    This SVG uses &#60;circle&#62;.The centre of a circle is at (75px,75px),and the radius is 70px.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="hw9-3.svg" target="_blank">
+                        <img src="hw9-3.svg"
+                            alt="Student define an SVG file that shows any shape you like using gradient color">
+                    </a>
+                </td>
+                <td>
+                    The third SVG shows any shape you like using gradient color.<br>
+                    I used a &#60;polygon&#62; to define a triangle, but this also can draw other polygons.<br>
+                    &#60;polygon&#62; is defined must having three or more points.<br>
+                    The color uses the &#60;defs&#62; and &#60;radialGradient&#62; to define it.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--- Example for SVG code.
+    <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"  height="300" width="300">
+    <polyline  points="0,0 300,0 300,300 0,300 0,0" stroke="#990D35" stroke-width="3" fill="#FCD581" />
+    Sorry, your browser does not support inline SVG.
+    </svg>
+-->
+    <ul>
+        <li><a href="index.html"> Go back to Main Page</a></li>
+    </ul>
+
+    <p>Copyright &copy; Chu-Cheng Li</p>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--HW9 - SVG. It creates by Chu-Cheng Li 11/21/2023 -->
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" height="150" width="150">
+   <a href="hw9-2.svg" target="_blank">
+      <circle cx="75" cy="75" r="70" stroke="red" stroke-width="3" fill="blue" />
+   </a> 
+   Sorry, your browser does not support inline SVG. 
+</svg>
