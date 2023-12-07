@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HW10 - JSON</title>
+    <!--HW10 - JSON. It creates by Chu-Cheng Li 11/21/2023 -->
+    <meta name="description" content="XML, JSON, XSLT, HTML5.">
+    <style>
+        h1 {
+            text-align: center;
+            font-style: italic;
+            color: #990D35;
+        }
+        h2 {
+            color:blue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+    $( function() {
+        process();
+      } );
+    function process()
+    {
+        var friends = [{
+            "name": "John",
+            "age": "28",
+            "gender": "male",
+            "profession": "sales rep"
+       },
+       {
+            "name": "Maryenne",
+            "age": "26",
+            "gender": "female",
+            "profession": "web developer"
+       }];
+       var name = friends[0].name
+       var profession=friends[0].profession
+       $("#name").append(name);
+       $("#profession").append(profession);
+    }
+</script>
+</head>
+<body>
+    <h1>HW10 - JSON</h1>
+    <hr>
+    <h2>Quesion:</h2>
+    <h3>Suppose you have the following code in JavaScript (recognize the data being passed to the variable in JSON format) - the <strong>var</strong> statement is just to declare the variable called <strong>friends<br></strong></h3>
+    <pre>
+        var friends = [{
+            "name": "John",
+            "age": "28",
+            "gender": "male",
+            "profession": "sales rep"
+       },
+       {
+            "name": "Maryenne",
+            "age": "26",
+            "gender": "female",
+            "profession": "web developer"
+       }];
+    </pre>
+    <h3>If you see the following command in this same JavaScript code, that is referring to the above JSON structure, what will be the content of the variable <strong>tablecell1</strong>?</h3>
+    <pre>var tablecell1 = '&lt;tr&gt;&lt;td&gt;' + friends[0].name + '&lt;/td&gt;&lt;td&gt;' + friends[0].profession + '&lt;/td&gt;&lt;/tr&gt;'</pre>
+    <h2>Answer:</h2>
+    var tablecell1 = '&lt;tr&gt;&lt;td&gt;' + <p id="name" style="display:inline-block;"></p> + '&lt;/td&gt;&lt;td&gt;' + <p id="profession" style="display:inline-block;"></p> + '&lt;/td&gt;&lt;/tr&gt;'
+
+    <h3>Link:<a href="hw10.json" target="_blank">Homework 10 json file.</a></h3>
+
+    <hr>
+    <ul>
+        <li><a href="index.html"> Go back to Main Page</a></li>
+    </ul>
+
+    <p>Copyright &copy; Chu-Cheng Li</p>
+</body>
+
+</html>
