@@ -1,0 +1,117 @@
+h1 {
+    text-align: center;
+    font-style: italic;
+    color: #1D3124;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #E59560;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F6F4E8;
+}
+
+.frame
+{
+    overflow:auto;
+}
+
+.menu {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.menu a {
+    background-color: #BACEC1;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: #F6F4E8;
+}
+
+.main {
+    float: left;
+    width: 80%;
+    padding: 0 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+@media only screen and (max-width: 620px) {
+
+    /* For mobile phones: */
+    .menu,
+    .main {
+        width: 100%;
+    }
+}
+
+.myself
+{
+    text-align: center;
+}
+
+form {
+    padding: 1em;
+    background: #f9f9f9;
+    border: 1px solid black;
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+form input {
+    margin-bottom: 1rem;
+    background: white;
+    border: 1px solid #9c9c9c;
+}
+
+form textarea {
+    max-width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+label {
+    text-align: left;
+    display: block;
+    padding: 0.5em 1.5em 0.5em 0;
+}
+
+.myinput {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 0.5rem;
+}
+
+input:focus,
+textarea:focus {
+    background-color: gold;
+}
+
+form div {
+    text-align: center;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background: lightgray;
+    padding: 0.7em;
+    border: 0;
+}
