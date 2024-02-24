@@ -33,7 +33,7 @@ aside {
     display: flex;
     flex-direction: column;
     float: left;
-    width: 20%;
+    width: calc(var(--precent100) * 0.2);;
 }
 
 aside a {
@@ -41,7 +41,7 @@ aside a {
     padding: 8px;
     margin-top: 7px;
     display: block;
-    width: 100%;
+    width: var(--precent100);
     color: var(--background-color);
 }
 
