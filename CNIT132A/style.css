@@ -97,7 +97,7 @@ textarea:focus {
     background-color: gold;
 }
 
-form div, h1, h2, figure, footer, .myself, .bodystyle, .menu{
+form div, h1, h2, figure, footer, .ta-c{
     text-align: center;
 }
 
