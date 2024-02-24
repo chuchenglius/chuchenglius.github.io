@@ -1,11 +1,9 @@
 h1 {
-    text-align: center;
     font-style: italic;
     color: #1D3124;
 }
 
 h2 {
-    text-align: center;
     font-weight: bold;
     color: #E59560;
 }
@@ -18,9 +16,8 @@ body {
     background-color: #F6F4E8;
 }
 
-.frame
-{
-    overflow:auto;
+.frame {
+    overflow: auto;
 }
 
 .menu {
@@ -29,7 +26,6 @@ body {
     flex-direction: column;
     float: left;
     width: 20%;
-    text-align: center;
 }
 
 .menu a {
@@ -41,29 +37,26 @@ body {
     color: #F6F4E8;
 }
 
-.main {
+main {
     float: left;
     width: 80%;
     padding: 0 20px;
 }
 
-footer {
-    text-align: center;
+.bodystyle {
+    padding: 15px;
 }
+
 
 @media only screen and (max-width: 620px) {
 
     /* For mobile phones: */
     .menu,
-    .main {
+    main {
         width: 100%;
     }
 }
 
-.myself
-{
-    text-align: center;
-}
 
 form {
     padding: 1em;
@@ -104,7 +97,7 @@ textarea:focus {
     background-color: gold;
 }
 
-form div {
+form div, h1, h2, figure, footer, .myself, .bodystyle, .menu{
     text-align: center;
 }
 
@@ -113,4 +106,10 @@ input[type="reset"] {
     background: lightgray;
     padding: 0.7em;
     border: 0;
+}
+
+img
+{
+    width: 800px;
+    height: 600px;
 }
