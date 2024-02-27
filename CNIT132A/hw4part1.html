@@ -2,64 +2,43 @@
 <html lang="en">
 
 <head>
-	<title>Working with Grids</title>
-	<meta charset="utf-8">
-	<meta name="description" content="working with grids in CNIT 132A">
-	<!--CNIT-132A - Advanced HTML and CSS. It creates by Chu-Cheng Li 02/27/2024 -->
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6S4RG9GTB"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-K6S4RG9GTB');
-	</script>
-	<style>
-		.page-layout {
-			display: grid;
+   <title>Working with Grids</title>
+   <meta charset="utf-8">
+   <meta name="description" content="working with grids in CNIT 132A">
+   <style>
+      .page-layout {
+         display: grid; 
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: 50vh 50vh;
-			
-		}
-
-		.news,
-		.links,
-		.search,
-		.messages {
-			text-align: center;
-			font-weight: bold;
-		}
-
-		.news {
-			background-color: cyan;
-			order:4;
-		}
-
-		.links {
-			background-color: orange;
-			order:2;
-		}
-
-		.search {
-			background-color: violet;
-			order:1;
-		}
-
-		.messages {
-			background-color: red;
-			order:3;
-		}
-	</style>
+      }
+	  .news, .links, .search, .messages {
+	     text-align: center;
+		 font-weight: bold;
+	  }
+	  .news {
+	     background-color: cyan;
+		 order:4;
+	  }
+	  .links {
+	     background-color: orange;
+		 order:2;
+	  }
+	  .search {
+	     background-color: violet;
+		 order:1;
+	  }
+	  .messages {
+	     background-color: red;
+		 order:3;
+	  }
+   </style>
 </head>
-
 <body>
-	<div class="page-layout">
-		<div class="news">News</div>
-		<div class="links">Links</div>
-		<div class="search">Search</div>
-		<div class="messages">Messages</div>
-	</div>
+<div class="page-layout">
+  <div class="news">News</div>
+  <div class="links">Links</div>
+  <div class="search">Search</div>
+  <div class="messages">Messages</div>
+</div>
 </body>
-
 </html>
