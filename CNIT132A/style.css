@@ -33,7 +33,7 @@ aside {
     display: flex;
     flex-direction: column;
     float: left;
-    width: calc(var(--precent100) * 0.2);;
+    width: calc(var(--precent100) * 0.2);
 }
 
 aside a {
