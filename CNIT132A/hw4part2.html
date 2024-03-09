@@ -16,50 +16,42 @@
 		gtag('config', 'G-K6S4RG9GTB');
 	</script>
 	<style>
-		.page-layout {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-			align-items: flex-start;
-			align-content: flex-start;
-			overflow: auto;
-			flex-direction: row;
+		* {
+			box-sizing: border-box;
 		}
 
-		.name,
-		.aside1,
+		body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+			margin: 0;
+		}
+
+		main {
+			display: flex;
+		}
+
+		header,
+		footer,
 		.content1,
-		.content2,
-		.aside2,
-		footer {
-			font-weight: bold;
-			display: flex;
-			justify-content: center;
-		}
-
-		.name,
-		footer {
+		.content2 {
 			align-items: center;
 		}
 
-		.name {
-			background-color: #FF6347;
-			width: 100%;
-			height: 5vh;
-
-		}
-
-		.aside1,
-		.aside2 {
-			width: 25%;
-			height: 20vh;
-		}
-
+		nav,
+		aside,
 		.content1,
 		.content2 {
 			width: 25%;
 			height: 20vh;
-			align-items: center;
+		}
+
+		nav {
+			background-color: #FFFF00;
+		}
+
+		aside {
+			background-color: #FFC0CB;
 		}
 
 		.content1 {
@@ -72,32 +64,43 @@
 			background-color: #EE82EE;
 		}
 
-		.aside1 {
-			background-color: #FFFF00;
-		}
-
-		.aside2 {
-			background-color: #FFC0CB;
+		header {
+			background-color: #FF6347;
+			height: 5vh;
 		}
 
 		footer {
 			background-color: #90EE90;
-			margin-top: auto;
 			height: 10vh;
+		}
+
+		header,
+		footer,
+		.content1,
+		.content2,
+		nav,
+		aside {
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
 		}
 	</style>
 </head>
 
 <body>
-	<div class="page-layout">
-		<div class="name">Name of Company</div>
-		<div class="aside1">This is the aside 1</div>
-		<div class="content1">This is the main article of my page! This is the main contect of the page. In a 3-column
+
+	<header>Name of Company</header>
+	<main>
+		<nav>This is the aside 1</nav>
+		<div class="content1">This is the main article of my page! This is the main contect of the page. In a
+			3-column
 			layout, it should be shown in the middel between the aside 1 and aside 2!</div>
-		<div class="content2">This column was created to have some content as a challenge to adapt the old 3-column
+		<div class="content2">This column was created to have some content as a challenge to adapt the old
+			3-column
 			layout to a 4-column layout</div>
-		<div class="aside2">This is the aside 2</div>
-	</div>
+		<aside>This is the aside 2</aside>
+	</main>
+
 	<footer>
 		This is the footer<br>Copright © 2017
 	</footer>
