@@ -1,50 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <title>Great movie titles</title>
-   <meta name="description" content="a list of great movie titles, name of director and trailer">
-   <meta charset="utf-8">
-   <style>
-     body { background-color: #DEB887; color: #A52A2A; }
-     header {width: 60%; background-image: url(banner.png); margin: 0 auto; text-align: center; border-shadow: 5px 5px 5px gray; font-size: 1.5rem; color: black;}
-	 div { width: 80%; margin: 0 auto; border: 2px solid #D2691E; padding: 0 10px;}
-     footer {width: 60%; margin: 10px auto; padding: 3px 0; text-align:center; background-color: #A52A2A; color:white; font-size: 0.9rem;}	 
-	 footer img {float:left; margin: 0 5px 5px 0;}
-   </style>
+  <title>Great movie titles</title>
+  <meta name="description" content="a list of great movie titles, name of director and trailer">
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #DEB887;
+      color: #A52A2A;
+    }
+
+    header {
+      width: 60%;
+      background-image: url(banner.png);
+      margin: 0 auto;
+      text-align: center;
+      border-shadow: 5px 5px 5px gray;
+      font-size: 1.5rem;
+      color: black;
+    }
+
+    div {
+      width: 80%;
+      margin: 0 auto;
+      border: 2px solid #D2691E;
+      padding: 0 10px;
+    }
+
+    footer {
+      width: 60%;
+      margin: 10px auto;
+      padding: 3px 0;
+      text-align: center;
+      background-color: #A52A2A;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    footer img {
+      float: left;
+      margin: 0 5px 5px 0;
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h1>Great Movies</h1>
-<h2>Great Directors</h2>
-</header>
-<article>
-  <h3>Avatar</h3>
-  <p>Director: James Cameron (born August 16, 1954)</p>
-  <p>Type: Science fiction</p>
-  <p>Release Date: December 18, 2009</p>
-</article>
-<article>
-  <h3>Star Wars: Episode VII</h3>
-  <p>Director: J. J. Abrams (born June 27, 1966)</p>
-  <p>Type: Science fiction</p>
-  <p>Release Date: December 18, 2015</p>
-</article>
-<article>
-  <h3>Titanic</h3>
-  <p>Director: James Cameron (born August 16, 1954)</p>
-  <p>Type: Drama</p>
-  <p>Release Date: December 19, 1997</p>
-</article>
-<article>
-  <h3>Schindler's List</h3>
-  <p>Director: Steven Spielberg (born December 18, 1946)</p>
-  <p>Type: Drama</p>
-  <p>Release Date: December 15, 1993</p>
-</article>
-<footer>
-  <img src="movielogo.png">
-  <p>List made by CNIT 132A class at CCSF</p>
-  <p>Copyright &copy; 2017</p>
-</footer>  
+  <header>
+    <h1>Great Movies</h1>
+    <h2>Great Directors</h2>
+  </header>
+  <div itemscope itemtype="https://schema.org/Movie">
+    <article>
+      <h3 itemprop="name">Avatar</h3>
+      <p itemprop="director">Director: James Cameron (born <span itemprop="birthDate">August 16, 1954</span>)</p>
+      <p itemprop="genre">Type: Science fiction</p>
+
+      <p>Release Date: <time itemprop="startDate" datetime="2009-12-18">December 18, 2009</time></p>
+    </article>
+  </div>
+  <div itemscope itemtype="https://schema.org/Movie">
+    <article>
+      <h3 itemprop="name">Star Wars: Episode VII</h3>
+      <p itemprop="director">Director: J. J. Abrams (born <span itemprop="birthDate">June 27, 1966)</span></p>
+      <p itemprop="genre">Type: Science fiction</p>
+      <p>Release Date: <time itemprop="startDate" datetime="2015-12-18">December 18, 2015</time></p>
+
+    </article>
+  </div>
+  <div itemscope itemtype="https://schema.org/Movie">
+    <article>
+      <h3 itemprop="name">Titanic</h3>
+      <p itemprop="director">Director: James Cameron (born <span itemprop="birthDate">August 16, 1954</span>)</p>
+      <p itemprop="genre">Type: Drama</p>
+      <p>Release Date:  <time itemprop="startDate" datetime="1997-12-19">December 19, 1997</time></p>
+    </article>
+  </div>
+  <div itemscope itemtype="https://schema.org/Movie">
+    <article>
+      <h3 itemprop="name">Schindler's List</h3>
+      <p itemprop="director">Director: Steven Spielberg (born <span itemprop="birthDate">December 18, 1946</span>)</p>
+      <p itemprop="genre">Type: Drama</p>
+      <p>Release Date: <time itemprop="startDate" datetime="1993-12-15">December 15, 1993</time></p>
+    </article>
+  </div>
+  <footer>
+    <img src="movielogo.png">
+    <p>List made by CNIT 132A class at CCSF</p>
+    <p>Copyright &copy; 2017</p>
+  </footer>
 </body>
+
 </html>
