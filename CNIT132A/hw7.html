@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Flying plane</title>
+  <meta name="description" content="airplane flying with CSS3 animation">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="hw7.css">
+   <!--CNIT-132A - Advanced HTML and CSS. It creates by Chu-Cheng Li 04/23/2024 -->
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6S4RG9GTB"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-K6S4RG9GTB');
+   </script>
+  <script>
+    function AnimationProcess() {
+      var btn1 = document.getElementById("btn1");
+      var sky = document.querySelector('#sky');
+      var slogan = document.querySelector('#slogan');
+      if (slogan.style.animationName !== 'none') {
+        slogan.style.animationName = 'none';
+        sky.style.animationName = 'none';
+        btn1.textContent = 'Start Animation';
+      } else {
+        slogan.style.animationName = 'animatedSlogan';
+        sky.style.animationName = 'animatedBackground';
+        btn1.textContent = 'Stop Animation';
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <div id="sky">
+    <h1>
+      Kevin's Airlines
+    </h1>
+    <img id="plan" src="plane.png" alt="cartoon airplane">
+    <div id="slogan">
+      FLY WITH US, WE ARE SAFE
+    </div>
+    <button id="btn1" onclick="AnimationProcess()">Stop Animation</button>
+  </div>
+</body>
+
+</html>
