@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CSS Shapes</title>
+	<meta charset="utf-8">
+	<meta name="description" content="working with grids in CNIT 132A">
+	<!--CNIT-132A - Advanced HTML and CSS. It creates by Chu-Cheng Li 04/23/2024 -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6S4RG9GTB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-K6S4RG9GTB');
+	</script>
+	<style>
+		body {
+
+			container-name: homework7part2;
+			container-type: inline-size;
+
+			background-color: #F5F5DC;
+
+		}
+
+		.content {
+			margin-left: 20%;
+			margin-right: 20%;
+		}
+
+		.shape {
+			float: left;
+			shape-outside: url(house.png);
+			shape-margin: 10px;
+		}
+
+		@container homework7part2 (width < 600px) {
+			h2 {
+				font-size: smaller;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>
+		Shaping Content Around Image
+	</h1>
+	<div class="content">
+		<h2>
+			Shaping around the house
+		</h2>
+
+		<img src="house.png" alt="a house picture" class="shape">
+		<p>This is a paragraph that will start on the right side of the house shape and the CSS substituted the
+			float of the image (the house.png) to use the CSS Shapes properties. </p>
+		<p>This page was modified for that purpose and you will see that these two paragraphs will then follow the shape
+			of that house following any curve, or diagonal line you see instead of just following a rectangular shape of
+			the width and height of the image.</p>
+		<p>
+			This is the start of the second paragraph and this paragraph will also the shape of the house and the
+			second paragraph is here just to show to you that it will follow the shape of the house until the shape ends
+			when then the content will align as it is the default of the browser.</p>
+		<p>
+			This is the third paragraph and, by now, I am not sure if this paragraph will be written on the right
+			side of the image or the paragraph has been placed below the image starting on the left side of the browser
+			andF being normally displayed as any other element of a web page.
+		</p>
+	</div>
+
+
+</body>
+
+</html>
