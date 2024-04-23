@@ -1,15 +1,96 @@
-* { background-color:#C0DEED;}
+:root {
+    --slogan-width: 250px;
+    --background-width: 2247px;
+    /*Picture size 2247px * 190px*/
+}
+
+* {
+    background-color: #C0DEED;
+}
+
+h1 {
+    background-color: transparent;
+}
 
 #sky {
-position:fixed;
-top:0px;left:0px;
-width:100%;
-height:100%;
-text-align:center;
-margin:0px;
-padding:0px;
-background-color:#C0DEED;
-background: url(clouds.png) center top repeat-x;
-padding-top:300px;
-padding-bottom:10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: #C0DEED;
+    background: url(clouds.png) center top repeat-x;
+    animation: animatedBackground 10s linear infinite;
+}
+
+#plan {
+    background-color: transparent;
+    padding-top: 200px;
+    padding-bottom: 10px;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: var(--background-width) 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+#slogan {
+    position: absolute;
+    background-color: transparent;
+    width: var(--slogan-width);
+    animation-name: animatedSlogan, animatedRotation;
+    animation-duration: 10s, 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 10s;
+    left: calc(50% - (var(--slogan-width)/2));
+}
+
+@keyframes animatedSlogan {
+    0% {
+        left: 0;
+    }
+
+    65% {
+        transform: scaleX(1);
+    }
+
+    66% {
+        left: calc(100% - var(--slogan-width));
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: calc(50% - (var(--slogan-width)/2));
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes animatedRotation {
+    0% {
+        transform: scaleX(-1);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(-1);
+    }
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: calc(50% - 100px);
+    top: 70%;
 }
