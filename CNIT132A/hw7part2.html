@@ -17,10 +17,10 @@
 	</script>
 	<style>
 		body {
-
+			-webkit-container-name: homework7part2;
+			-webkit-container-type: inline-size;
 			container-name: homework7part2;
 			container-type: inline-size;
-
 			background-color: #F5F5DC;
 
 		}
@@ -32,12 +32,14 @@
 
 		.shape {
 			float: left;
+			-webkit-shape-outside: url(house.png);
+			-webkit-shape-margin: 10px;
 			shape-outside: url(house.png);
 			shape-margin: 10px;
 		}
 
-		@container homework7part2 (width < 600px) {
-			h2 {
+		@media only screen and (max-width: 600px) {
+			.content h2 {
 				font-size: smaller;
 			}
 		}
