@@ -1,5 +1,5 @@
 :root {
-    --slogan-width: 250px;
+    --slogan-width: 320px;
     --background-width: 2247px;
     /*Picture size 2247px * 190px*/
 }
@@ -46,11 +46,11 @@ h1 {
     position: absolute;
     background-color: transparent;
     width: var(--slogan-width);
-    animation-name: animatedSlogan, animatedRotation;
-    animation-duration: 10s, 10s;
+    animation-name: animatedSlogan, animatedRotation, animatedSize;
+    animation-duration: 10s, 10s, 10s;
     animation-timing-function: linear;
-    animation-iteration-count: 1, infinite;
-    animation-delay: 0s, 10s;
+    animation-iteration-count: 1, infinite, infinite;
+    animation-delay: 0s, 10s, 0s;
     left: calc(50% - (var(--slogan-width)/2));
 }
 
@@ -85,6 +85,20 @@ h1 {
 
     100% {
         transform: scaleX(-1);
+    }
+}
+
+@keyframes animatedSize {
+    0% {
+        font-size:xx-small;
+    }
+
+    50% {
+        font-size:x-large;
+    }
+
+    100% {
+        font-size:xx-small;
     }
 }
 
