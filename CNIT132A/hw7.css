@@ -52,6 +52,7 @@ h1 {
     animation-iteration-count: 1, infinite, infinite;
     animation-delay: 0s, 10s, 0s;
     left: calc(50% - (var(--slogan-width)/2));
+    color: blue;
 }
 
 @keyframes animatedSlogan {
@@ -91,7 +92,7 @@ h1 {
 @keyframes animatedSize {
     0% {
         font-size:xx-small;
-        color:coral
+        color:red;
     }
 
     50% {
@@ -101,7 +102,7 @@ h1 {
 
     100% {
         font-size:xx-small;
-        color:coral
+        color:red;
     }
 }
 
