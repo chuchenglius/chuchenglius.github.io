@@ -91,14 +91,17 @@ h1 {
 @keyframes animatedSize {
     0% {
         font-size:xx-small;
+        color:coral
     }
 
     50% {
         font-size:x-large;
+        color: blue;
     }
 
     100% {
         font-size:xx-small;
+        color:coral
     }
 }
 
