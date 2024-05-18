@@ -132,3 +132,9 @@ table td {
     text-align: center;
     vertical-align: top
 }
+
+.reportsize
+{
+    width: 75vw;
+    height: 85vw;
+}
