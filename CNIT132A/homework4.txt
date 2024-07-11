@@ -1,0 +1,2 @@
+Nice work in part 1 - but check it out the use of grid-area as a possible solution for this problem Good work in part 2 but not sure why you called the left column as <nav> - there was even the word of aside in the content?! Nice to see the use of semantic tags though! Very good work in part 3 You can share, if you want, all your work in the forum
+Claudia Ferreira Da Silva, Mar 11 at 1:47pm

@@ -1,0 +1,4 @@
+Hi Professor, I submitted twice, so the file name was automatically changed to hw6-1.sass and hw6-1.scss by the Canvas system. Sorry about that.
+Chu-Cheng Li, Mar 26 at 12:56am
+Good work but you did the opposite with the function as we should have a function to convert px to rem for font-size as we DO NOT WANT to have font-size in px or pt as it's not accessible! The original file was put in rem exactly for you to know the value that should be shown (-0.5) You did not create global variables - only the variable inside the function when, in this situation you could easily have created variables for the values of width and colors (-1)
+Claudia Ferreira Da Silva, Apr 9 at 2:23pm
