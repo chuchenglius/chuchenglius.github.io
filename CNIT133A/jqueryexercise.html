@@ -80,8 +80,8 @@
         </footer>
         <p>
         Question: Is it possible to have multiple trigger types in HTMX?<br>
-        Yes, it is. We add "hx-trigger" in the code. We could use a comma to separate to event.<br>  
-        For example, we add "changes" and "load" events. We need to display at "id=result" area, so we add the hx-target attribute.<br>
+        Yes, it is. We add "hx-trigger" in the code, and we could use a comma to separate the "changes" and "load".<br>  
+        We need to display the "id=result" area, so we add the hx-target attribute.<br>
         The select code will be changed as follows:<br>
         <code>
             &lt;select name="city" id="city" hx-post="/api/search" hx-trigger="changes, load" hx-target="#result"&gt;<br>
