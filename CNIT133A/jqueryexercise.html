@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
  
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible"
           content="IE=edge">
@@ -37,10 +37,33 @@
             text-align: center;
             margin: 0 auto;
         }
+        
     </style>
+    <script>
+        $(document).ready(function(){
+            $("#light").click(function(){
+                event.preventDefault(); 
+                $(".main").css({
+                  "background-color" : "white",
+                  "color" : "black",
+                });
+                $(".pic").attr("src","sun.jpeg");
+                $(".pic").attr("alt","cartoon sun");
+            });
+            $("#dark").click(function(){
+                event.preventDefault(); 
+                $(".main").css({
+                  "background-color" : "black",
+                  "color" : "white",
+                });
+                $(".pic").attr("src","moon.jpeg");
+                $(".pic").attr("alt","cartoon moon");
+            });
+          });
+    </script>
 </head>
  
-<body>
+<body class="main">
         <header>
             <h1>Changing Themes</h1>
         </header>
@@ -48,13 +71,24 @@
             <h2>Using jQuery</h2>
             <p>We will create a jQuery code so if the user clicks on Light Theme button, you will apply the appropriate class to make the whole page lighter. The image below will also be changed to show the image of the sun! If the Dark Theme button is clicked, the image of the moon will be displayed and the appropriate class will be applied to the whole page as well</p>
             <figure>
-                <img src="sun.jpeg" alt="cartoon sun" width="300" height="280">
+                <img class="pic" src="sun.jpeg" alt="cartoon sun" width="300" height="280">
             </figure>
         </section>
         <footer>
             <button id="light">Light Theme</button>
             <button id="dark">Dark Theme</button>
         </footer>
+        <p>
+        Question: Is it possible to have multiple trigger types in HTMX?<br>
+        Yes, it is. We add "hx-trigger" in the code. We could use a comma to separate to event.<br>  
+        For example, we add "changes" and "load" events. We need to display at "id=result" area, so we add the hx-target attribute.<br>
+        The select code will be changed as follows:<br>
+        <code>
+            &lt;select name="city" id="city" hx-post="/api/search" hx-trigger="changes, load" hx-target="#result"&gt;<br>
+        </code>
+        In this scenario, the hx-post attribute specifies the "/api/search" to send the POST request to when the select item is "changes" or "load".<br>
+        When the server gets "/api/search", it will be doing some process.<br>
+    </p>
 </body>
  
 </html>
