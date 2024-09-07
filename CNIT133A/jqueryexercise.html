@@ -43,27 +43,27 @@
         $(document).ready(function(){
             $("#light").click(function(){
                 event.preventDefault(); 
-                $(".main").css({
+                $("body").css({
                   "background-color" : "white",
                   "color" : "black",
                 });
-                $(".pic").attr("src","sun.jpeg");
-                $(".pic").attr("alt","cartoon sun");
+                $("img").attr("src","sun.jpeg");
+                $("img").attr("alt","cartoon sun");
             });
             $("#dark").click(function(){
                 event.preventDefault(); 
-                $(".main").css({
+                $("body").css({
                   "background-color" : "black",
                   "color" : "white",
                 });
-                $(".pic").attr("src","moon.jpeg");
-                $(".pic").attr("alt","cartoon moon");
+                $("img").attr("src","moon.jpeg");
+                $("img").attr("alt","cartoon moon");
             });
           });
     </script>
 </head>
  
-<body class="main">
+<body>
         <header>
             <h1>Changing Themes</h1>
         </header>
@@ -71,7 +71,7 @@
             <h2>Using jQuery</h2>
             <p>We will create a jQuery code so if the user clicks on Light Theme button, you will apply the appropriate class to make the whole page lighter. The image below will also be changed to show the image of the sun! If the Dark Theme button is clicked, the image of the moon will be displayed and the appropriate class will be applied to the whole page as well</p>
             <figure>
-                <img class="pic" src="sun.jpeg" alt="cartoon sun" width="300" height="280">
+                <img src="sun.jpeg" alt="cartoon sun" width="300" height="280">
             </figure>
         </section>
         <footer>
