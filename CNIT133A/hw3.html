@@ -1,41 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="description" content="D3 homework">
-<title>D3 Homework</title>
-<style>
-#chart rect{
-  fill: #4aaeea;
-}
+  <meta charset="utf-8">
+  <meta name="description" content="D3 homework">
+  <title>D3 Homework</title>
+  <style>
+    #chart rect {
+      fill: #4aaeea;
+    }
 
-#chart text{
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end; 
-}
+    #chart text {
+      fill: white;
+      font: 10px sans-serif;
+      text-anchor: end;
+    }
 
-.axis text{
-  font: 10px sans-serif;
-}
+    .axis text {
+      font: 10px sans-serif;
+    }
 
-.axis path, .axis line{
-  fill: none;
-  stroke : #fff;
-  shape-rendering: crispEdges;
-}
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #fff;
+      shape-rendering: crispEdges;
+    }
 
-body{
-  background: #1a1a1a;
-  color : #eaeaea;
-  padding : 10px;
-}
-</style>
+    body {
+      background: #1a1a1a;
+      color: #eaeaea;
+      padding: 10px;
+    }
+
+    table{
+      text-align:center;
+    }
+
+    th, td {
+      vertical-align:middle;
+      padding: 5px;
+    }
+  </style>
 </head>
-<body>
-<div id="chart"></div> 
+
+<body onload="schoolChart('hw3data.json')">
+  <div id="chart"></div>
 </body>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
 
 <script>
+  const chartWidth = 800,
+    chartHeight = 400,
+    chartMargin = 40;
+
+  const svg = d3.select("#chart")
+    .append("svg")
+    .attr("width", chartWidth)
+    .attr("height", chartHeight);
+
+  const xScale = d3.scaleBand()
+    .range([chartMargin * 2, chartWidth - chartMargin / 2])
+    .padding(0.2)
+
+  const yScale = d3.scaleLinear()
+    .range([chartHeight - chartMargin, chartMargin]);
+
+  const xAxisGenerator = d3.axisBottom(xScale);
+  const yAxisGenerator = d3.axisLeft(yScale)
+    .ticks(5)
+    .tickSize(3)
+
+  const xAxis = svg
+    .append("g")
+    .attr("transform", `translate(0,${chartHeight - chartMargin})`)
+
+  const yAxis = svg
+    .append("g")
+    .attr("transform", `translate(${chartMargin * 2},0)`)
+
+  const schoolChart = async (jsonfile) => {
+    const data = await d3.json(jsonfile)
+
+    xData = data.map((i) => i["term"]);
+    yData = data.map((i) => parseInt(i["students"]));
+
+    xScale.domain(xData);
+    xAxis.call(xAxisGenerator);
+
+    xAxis.selectAll("text")
+      .attr("transform", "translate(20,0)")
+      .style("text-anchor", "end");
+
+    yScale.domain([0, d3.max(yData)]).nice();
+    yAxis.call(yAxisGenerator);
+
+    
+    const bar = svg.selectAll("rect")
+      .data(data)
+      .join("rect")
+
+    bar.join("rect")
+      .attr("x", d => xScale(d["term"]))
+      .attr("y", d => yScale(parseInt(d["students"])))
+      .attr("width", xScale.bandwidth())
+      .attr("height", d => (chartHeight - chartMargin) - yScale(parseInt(d["students"])))
+
+    const tooltips = d3.select("#chart")
+      .append("div")
+      .style("opacity", 0)
+      .style('position', 'absolute')
+      .attr("class", "tooltip")
+      .style("color","white")
+      .style("border", "solid")
+      .style("border-width", "2px")
+      .style("border-radius", "5px")
+      .style("padding", "5px")
+
+    d3.selectAll('rect')
+      .style('cursor', 'pointer')
+      .on('mouseover', function () {
+        return tooltips.style("visibility", "visible")
+      })
+      .on("mousemove", function (d) {
+        let pt = d3.pointer(event, this)
+        return tooltips.style("opacity", 1)
+          .html("<table><thead><tr><th>Term</th>" + "<th>students</th></tr></thead><tbody><tr><td>" + d.target.__data__["term"] + "</td><td>" + d.target.__data__["students"]+"</td></tr></tbody></table>")
+          .style('left', pt[0] + 30 + 'px')
+          .style('top', pt[1] + 'px')
+      })
+      .on('mouseleave', function () {
+        return tooltips.style("visibility", "hidden")
+      });
+  }
 </script>
