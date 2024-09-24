@@ -125,7 +125,7 @@
       .on("mousemove", function (d) {
         let pt = d3.pointer(event, this)
         return tooltips.style("opacity", 1)
-          .html("<table><thead><tr><th>Term</th>" + "<th>students</th></tr></thead><tbody><tr><td>" + d.target.__data__["term"] + "</td><td>" + d.target.__data__["students"]+"</td></tr></tbody></table>")
+          .html("<table><thead><tr><th>Term</th>" + "<th>Students</th></tr></thead><tbody><tr><td>" + d.target.__data__["term"] + "</td><td>" + d.target.__data__["students"]+"</td></tr></tbody></table>")
           .style('left', pt[0] + 30 + 'px')
           .style('top', pt[1] + 'px')
       })
