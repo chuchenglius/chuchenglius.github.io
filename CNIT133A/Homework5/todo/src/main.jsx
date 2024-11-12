@@ -3,8 +3,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
+const DATA = [
+  { id: "todo-0", name: "Study", completed: true },
+  { id: "todo-1", name: "Groceries", completed: false },
+  { id: "todo-2", name: "Read", completed: false },
+ ];
+ 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <App tasks={DATA}/>
   </StrictMode>,
 )
