@@ -19,11 +19,13 @@ const options = [
 const options = data;
 
 function Form(props) {
+
+    const [errormessage, setText] = useState("");    
     const [exclass, setName] = useState(null);
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.addTask(exclass.name);
+        setText(props.addTask(exclass.name));
         setName("");
     }
 
@@ -51,6 +53,7 @@ function Form(props) {
             <button type="submit" className="btn btn__primary btn__lg">
                 Add
             </button>
+            <label className="label__lg errormessage">{errormessage}</label>
         </form>
     );
 }

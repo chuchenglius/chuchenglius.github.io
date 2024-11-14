@@ -28,13 +28,21 @@ function App(props) {
   ));
 
   function addTask(name) {
-    if(tasks.filter((task) => name == task.name).length==0 && name !=null)
-    {
+    if (tasks.filter((task) => name == task.name).length == 0 && name != null) {
       const newTask = { id: `t-${nanoid()}`, name, completed: false };
       setTasks([...tasks, newTask]);
     }
-    else if(name ==null) console.error("You selected empty.")
-    else console.error("You already selected this course.")
+    else if (name == null) 
+    {
+       console.error("You selected empty.") 
+       return "You selected empty.";
+    }
+    else 
+    { 
+      console.error("You already selected this course.")
+      return "You already selected this course.";
+    }
+    return "";
   }
 
   const tasksNoun = taskList.length > 1 ? "courses" : "course";
