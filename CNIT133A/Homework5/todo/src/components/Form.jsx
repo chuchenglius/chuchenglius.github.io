@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Select from 'react-select'
+import data from './class.json'
 
+/*
 const options = [
     { label: 'CNIT 131A - XML & JSON', name: 'CNIT 131A - XML & JSON' },
     { label: 'CNIT 132 - Intermediate HTML & CSS', name: 'CNIT 132 - Intermediate HTML & CSS' },
@@ -12,10 +14,11 @@ const options = [
     { label: "CNIT 131 - Internet & Intro to HTML, CSS", name: "CNIT 131 - Internet & Intro to HTML, CSS" },
     { label: "CNIT 106 - Introduction to Networks", name: "CNIT 106 - Introduction to Networks" },
     { label: "CNIT 120 - Network Security", name: "CNIT 120 - Network Security" },
-]
+]*/
+
+const options = data;
 
 function Form(props) {
-
     const [exclass, setName] = useState(null);
 
     function handleSubmit(event) {
@@ -24,8 +27,8 @@ function Form(props) {
         setName("");
     }
 
-    const handleChange = (option) => {
-        setName(option);
+    const handleChange = (myData) => {
+        setName(myData);
     };
 
     return (

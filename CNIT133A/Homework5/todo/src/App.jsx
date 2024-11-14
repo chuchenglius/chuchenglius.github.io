@@ -37,7 +37,7 @@ function App(props) {
     else console.error("You already selected this course.")
   }
 
-  const tasksNoun = taskList.length !== 1 ? "courses" : "course";
+  const tasksNoun = taskList.length > 1 ? "courses" : "course";
   const headingText = `${taskList.length} ${tasksNoun} listed`;
   return (
     <div className="todoapp stack-large">
