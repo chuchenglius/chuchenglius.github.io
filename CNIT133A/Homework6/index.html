@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <h1>Hello, CNIT 133A. Learning Vue</h1>
+    <div id="app">
+        <p>{{ title }} by {{ author }} - Quantity available: {{ qty }}</p>
+        <button v-on:click="qty++">Increase Quantity</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
